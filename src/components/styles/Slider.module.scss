@@ -1,0 +1,30 @@
+.slider {
+    appearance : none;
+    width      : 100%;
+    background : var(--clr-accent-green);
+    height     : .5rem;
+    outline    : none;
+    cursor     : grab;
+
+    &:active {
+        cursor : grabbing;
+    }
+
+    &::-moz-range-thumb {
+        appearance    : none;
+        height        : 1.75rem;
+        width         : 1.75rem;
+        background    : var(--clr-neutral-100);
+        border        : none;
+        border-radius : 100vmax;
+    }
+
+    &::-webkit-slider-thumb {
+        appearance    : none;
+        height        : 1.75rem;
+        width         : 1.75rem;
+        background    : var(--clr-neutral-100);
+        border        : none;
+        border-radius : 100vmax;
+    }
+}

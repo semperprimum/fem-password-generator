@@ -1,0 +1,36 @@
+.flexPair {
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+}
+
+.characterNumber {
+    font-size : var(--fs-l);
+    color     : var(--clr-accent-green)
+}
+
+.slider {
+    margin-top : .5rem;
+
+    @media only screen and (min-width : 37.5rem) {
+        margin-top : 1rem;
+    }
+}
+
+.checkboxContainer {
+    display      : grid;
+    gap          : 1rem;
+    margin-block : 2rem;
+
+    @media only screen and (min-width : 37.5rem) {
+        gap : 1.25rem;
+    }
+}
+
+.btn {
+    margin-top : 1rem;
+
+    @media only screen and (min-width : 37.5rem) {
+        margin-top : 2rem;
+    }
+}

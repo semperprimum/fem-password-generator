@@ -1,0 +1,44 @@
+.label {
+    display     : flex;
+    gap         : 1.5rem;
+    align-items : center;
+}
+
+.checkbox {
+    -webkit-appearance : none;
+    appearance         : none;
+    background-color   : transparent;
+    margin             : 0;
+
+    width          : 1.25rem;
+    height         : 1.25rem;
+    outline        : 2px solid var(--clr-neutral-100);
+    outline-offset : -2px;
+
+    display       : grid;
+    place-content : center;
+    transition    : background-color .2s ease, outline .2s ease;
+
+    &:checked {
+        background-color : var(--clr-accent-green);
+        outline-color    : var(--clr-accent-green);
+    }
+
+    &::before {
+        content             : "";
+        display             : block;
+        height              : 1.25rem;
+        width               : 1.25rem;
+        background-size     : contain;
+        background-image    : url("../../assets/images/icon-check.svg");
+        background-repeat   : no-repeat;
+        background-position : center;
+        transition          : transform .2s ease;
+
+        transform : scale(0);
+    }
+
+    &:checked::before {
+        transform : scale(1.1);
+    }
+}

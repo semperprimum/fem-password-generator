@@ -138,7 +138,7 @@ body {
 main {
   display    : grid;
   gap        : 1rem;
-  margin-top : -4.3rem; //! Only for FEM design coparison slider
+  margin-top : -4.3rem; //! Only for FEM design comparison slider
 
   @media only screen and (min-width : 37.5rem) {
     gap : 1.5rem;

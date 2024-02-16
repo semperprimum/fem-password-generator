@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ModifierForm, PasswordField } from "./components";
+import { Attribution, ModifierForm, PasswordField } from "./components";
 
 export default function App() {
   const [password, setPassword] = useState<string>("P4$5W0rD!");
@@ -19,6 +19,9 @@ export default function App() {
           setPassword={setPassword}
         />
       </main>
+      <footer>
+        <Attribution />
+      </footer>
     </>
   );
 }

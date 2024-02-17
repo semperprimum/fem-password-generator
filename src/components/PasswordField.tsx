@@ -31,8 +31,12 @@ export const PasswordField: React.FC<Props> = (props) => {
           >
             Copied
           </p>
-          <button onClick={onCopy} className={styles.copyBtn}>
-            <IconCopy />
+          <button
+            aria-label="copy password"
+            onClick={onCopy}
+            className={styles.copyBtn}
+          >
+            <IconCopy aria-hidden="true" />
           </button>
         </div>
       </div>

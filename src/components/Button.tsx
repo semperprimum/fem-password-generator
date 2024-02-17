@@ -10,7 +10,9 @@ export const Button: React.FC<Props> = (props) => {
   return (
     <button onClick={props.onClick} className={styles.button}>
       {props.children}
-      <span className={styles.icon}>{props.icon}</span>
+      <span aria-hidden="true" className={styles.icon}>
+        {props.icon}
+      </span>
     </button>
   );
 };

@@ -20,7 +20,7 @@ export const StrengthMeter: React.FC<Props> = ({
   const [strength, setStrength] = useState<string>("");
 
   useEffect(() => {
-    if (password !== "P4$5W0rD!") calculateStrength();
+    if (password) calculateStrength();
   }, [password]);
 
   const calculateStrength = (): void => {

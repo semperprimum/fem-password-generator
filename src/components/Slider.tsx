@@ -22,6 +22,7 @@ export const Slider: React.FC<Props> = ({ length, setLength }) => {
 
   return (
     <input
+      aria-label="password length"
       ref={slider}
       type="range"
       min={0}

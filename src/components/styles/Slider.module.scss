@@ -1,3 +1,26 @@
+@mixin thumbStyles {
+    -webkit-appearance : none;
+    -moz-appearance    : none;
+    appearance         : none;
+    height             : 1.75rem;
+    width              : 1.75rem;
+    background         : var(--clr-neutral-100);
+    border             : none;
+    border-radius      : 100vmax;
+
+    @media only screen and (min-width : 37.5rem) {
+        outline        : 2px solid var(--clr-neutral-100);
+        outline-offset : -2px;
+
+        transition : background-color .2s ease, outline-color .2s ease;
+
+        &:hover {
+            background    : var(--clr-neutral-400);
+            outline-color : var(--clr-accent-green);
+        }
+    }
+}
+
 .slider {
     appearance : none;
     width      : 100%;
@@ -10,21 +33,11 @@
         cursor : grabbing;
     }
 
-    &::-moz-range-thumb {
-        appearance    : none;
-        height        : 1.75rem;
-        width         : 1.75rem;
-        background    : var(--clr-neutral-100);
-        border        : none;
-        border-radius : 100vmax;
+    &::-webkit-slider-thumb {
+        @include thumbStyles();
     }
 
-    &::-webkit-slider-thumb {
-        appearance    : none;
-        height        : 1.75rem;
-        width         : 1.75rem;
-        background    : var(--clr-neutral-100);
-        border        : none;
-        border-radius : 100vmax;
+    &::-moz-range-thumb {
+        @include thumbStyles();
     }
 }

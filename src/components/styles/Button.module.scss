@@ -12,7 +12,21 @@
     text-transform   : uppercase;
 
     @media only screen and (min-width : 37.5rem) {
-        padding : 1.3125rem;
-        gap     : 1.5rem;
+        padding    : 1.3125rem;
+        gap        : 1.5rem;
+        cursor     : pointer;
+        transition : background-color .2s ease, color .2s ease;
+
+        &>span>svg {
+            fill       : currentColor;
+            transition : fill .2s ease;
+        }
+
+        &:hover {
+            background-color : transparent;
+            outline          : 2px solid var(--clr-accent-green);
+            outline-offset   : -2px;
+            color            : var(--clr-accent-green);
+        }
     }
 }

@@ -10,15 +10,15 @@ export const symbols: string[] = ["!", "@", "#", "$", "%", "^", "&", "*", "(", "
 export const generatePassword = (
   modifiers: string[][],
   length: number,
-  password: string = ""
-  // lastModifierIndex: number = -1
+  password: string = "",
+  lastModifierIndex: number = -1
 ): string => {
   if (length === 0) return password;
 
-  // let currentModifierIndex: number;
-  // do {
-  const currentModifierIndex = Math.floor(Math.random() * modifiers.length);
-  // } while (currentModifierIndex === lastModifierIndex);
+  let currentModifierIndex: number;
+  do {
+    currentModifierIndex = Math.floor(Math.random() * modifiers.length);
+  } while (currentModifierIndex === lastModifierIndex && modifiers.length >= 2);
 
   const randomChar: string =
     modifiers[currentModifierIndex][
@@ -28,7 +28,7 @@ export const generatePassword = (
   return generatePassword(
     modifiers,
     length - 1,
-    password + randomChar
-    // currentModifierIndex
+    password + randomChar,
+    currentModifierIndex
   );
 };

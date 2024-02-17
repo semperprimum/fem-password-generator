@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Attribution, ModifierForm, PasswordField } from "./components";
 
 export default function App() {
-  const [password, setPassword] = useState<string>("P4$5W0rD!");
+  const [password, setPassword] = useState<string>("");
   const [copied, setCopied] = useState<boolean>(false);
   return (
     <>
